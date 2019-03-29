@@ -24,6 +24,21 @@ if [ z"${BUILD_PATH}" == z ]; then
 	exit 1
 fi
 
+echo "#-------------------------#"
+echo "# Copying GLM for ${ARCH} #"
+echo "#-------------------------#"
+
+rsync -avc "${OWNPATH}/${GLM_NAME}/glm" "${INST_PATH}/include"
+
+echo "#---------------------------#"
+echo "# Building GLEW for ${ARCH} #"
+echo "#---------------------------#"
+
+BUILDDIR="${BUILD_PATH}/glew"
+mkdir -p "${BUILDDIR}" && cd "${BUILDDIR}"
+# TODO
+# configure, make, make install
+
 echo "#---------------------------#"
 echo "# Building FFTW for ${ARCH} #"
 echo "#---------------------------#"
@@ -50,3 +65,4 @@ BUILDDIR="${BUILD_PATH}/readline"
 mkdir -p "${BUILDDIR}" && cd "${BUILDDIR}"
 "${OWNPATH}/${READLINE_NAME}/configure" --enable-static --disable-shared --prefix="${INST_PATH}"
 make && make install
+

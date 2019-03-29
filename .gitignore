@@ -1,5 +1,7 @@
 /build-*
 /fftw-*
 /gsl-*
+/glew-*
+/glm-*
 /readline-*
 /zips

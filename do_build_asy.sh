@@ -28,6 +28,7 @@ echo "#--------------------------------#"
 echo "# Building asymptote for ${ARCH} #"
 echo "#--------------------------------#"
 
+mkdir -p "${BUILD_PATH}"
 cd "${BUILD_PATH}"
 svn co svn://tug.org/texlive/trunk/Build/source/utils/asymptote
 cd asymptote

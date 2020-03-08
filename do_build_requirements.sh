@@ -32,15 +32,6 @@ mkdir -p "${INST_PATH}/include"
 rsync -avc "${OWNPATH}/${GLM_NAME}/glm" "${INST_PATH}/include/"
 
 echo "#---------------------------#"
-echo "# Building GLEW for ${ARCH} #"
-echo "#---------------------------#"
-
-BUILDDIR="${BUILD_PATH}/glew"
-mkdir -p "${BUILDDIR}" && cd "${BUILDDIR}"
-# TODO
-# configure, make, make install
-
-echo "#---------------------------#"
 echo "# Building FFTW for ${ARCH} #"
 echo "#---------------------------#"
 

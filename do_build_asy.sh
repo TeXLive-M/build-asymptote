@@ -33,8 +33,7 @@ cd "${BUILD_PATH}"
 svn co svn://tug.org/texlive/trunk/Build/source/utils/asymptote
 cd asymptote
 
-./configure --enable-texlive-build --enable-gsl --enable-fftw \
-	CXXFLAGS="-ansi ${CXXFLAGS}" \
+./configure --enable-texlive-build --enable-gsl --enable-fftw --enable-gl=no \
 	CPPFLAGS="-I${INST_PATH}/include" \
 	LDFLAGS="-L${INST_PATH}/lib ${INST_PATH}/lib/libreadline.a ${LDFLAGS}"
 make

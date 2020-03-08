@@ -29,7 +29,7 @@ echo "# Copying GLM for ${ARCH} #"
 echo "#-------------------------#"
 
 mkdir -p "${INST_PATH}/include"
-rsync -avc "${OWNPATH}/${GLM_NAME}/glm" "${INST_PATH}/include"
+rsync -avc "${OWNPATH}/${GLM_NAME}/glm" "${INST_PATH}/include/"
 
 echo "#---------------------------#"
 echo "# Building GLEW for ${ARCH} #"

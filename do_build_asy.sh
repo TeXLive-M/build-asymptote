@@ -34,12 +34,13 @@ svn co svn://tug.org/texlive/trunk/Build/source/utils/asymptote
 cd asymptote
 
 ./configure --enable-texlive-build --enable-gsl --enable-fftw --enable-gl=no \
+	CXXFLAGS="-std=c++11 ${CXXFLAGS}" \
 	CPPFLAGS="-I${INST_PATH}/include" \
 	LDFLAGS="-L${INST_PATH}/lib ${INST_PATH}/lib/libreadline.a ${LDFLAGS}"
 make
 
-strip asy
-otool -L asy
-/usr/bin/file asy
+strip asy || exit 1
+otool -L asy || exit 1
+/usr/bin/file asy || exit 1
 
 make check

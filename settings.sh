@@ -10,7 +10,7 @@ OWNPATH=$(cd -P -- "$(dirname -- "$SCRIPTPATH")" && pwd -P)
 if [ -z "${ARCH}" ]; then
 	ARCH="x86_64"
 fi
-source "settings-${ARCH}.sh"
+#source "settings-${ARCH}.sh"
 
 BUILD_PATH="${OWNPATH}/build-${ARCH}"
 INST_PATH="${BUILD_PATH}/inst"

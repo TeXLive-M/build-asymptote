@@ -38,9 +38,9 @@ cd asymptote
 	CPPFLAGS="-I${INST_PATH}/include" \
 	LDFLAGS="-L${INST_PATH}/lib ${INST_PATH}/lib/libreadline.a ${LDFLAGS}"
 make
+make check
 
 strip asy || exit 1
 otool -L asy || exit 1
 /usr/bin/file asy || exit 1
 
-make check

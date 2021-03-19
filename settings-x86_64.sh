@@ -2,8 +2,8 @@ arch=x86_64
 targ=10.6
 sdk=10.6
 
-export CC="/opt/local/bin/clang-mp-10.0"
-export CXX="/opt/local/bin/clang++-mp-10.0 -stdlib=libc++"
+export CC="/opt/local/bin/clang-mp-11"
+export CXX="/opt/local/bin/clang++-mp-11 -stdlib=libc++"
 export OBJC="$CC"
 export OBJCXX="$CXX"
 
